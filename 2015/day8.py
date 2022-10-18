@@ -11,6 +11,7 @@ with open('day8input.txt', 'r') as f:
     stored = sum([len(x) for x in lines])
 
     # And decode the stored forms using the dead simple rules given.
+    # It doesn't actually matter what the hex code is, as we're just worried about the length
     literal = sum([len(
         HEX_REGEX.sub("'", x[1:-1].replace("\\\\", "\\").replace("\\\"", "\""))) for x in lines
     ])
